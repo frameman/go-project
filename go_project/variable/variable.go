@@ -11,7 +11,7 @@ type BaseInfo struct {
 	Organization string
 	RegDate      string
 	Updated      string
-	Commen       string
+	Comment      string
 	Ref          string
 }
 
@@ -20,16 +20,16 @@ func (m *BaseInfo) Reset() {
 }
 
 type OrgInfo struct {
-	OrgName        string
-	OrgId          string
-	Address        string
-	City           string
-	StateProv      string
-	PostalCode     string
-	Country        string
-	RegDate        string
-	Updated        string
-	Comment        string
+	OrgName    string
+	OrgId      string
+	Address    string
+	City       string
+	StateProv  string
+	PostalCode string
+	Country    string
+	RegDate    string
+	Updated    string
+	//Comment        string //same result with the baseinfo.comment
 	Ref            string
 	ReferralServer string
 }
@@ -39,7 +39,7 @@ func (m *OrgInfo) Reset() {
 }
 
 // the above is option
-type ContractPOrg struct {
+type ContactPOrg struct {
 	OrgTechHandle string
 	OrgTechName   string
 	OrgTechPhone  string
@@ -47,11 +47,11 @@ type ContractPOrg struct {
 	OrgTechRef    string
 }
 
-func (m *ContractPOrg) Reset() {
-	*m = ContractPOrg{}
+func (m *ContactPOrg) Reset() {
+	*m = ContactPOrg{}
 }
 
-type ContractPR struct {
+type ContactPR struct {
 	RTechHandle string
 	RTechName   string
 	RTechPhone  string
@@ -59,11 +59,23 @@ type ContractPR struct {
 	RTechRef    string
 }
 
-func (m *ContractPR) Reset() {
-	*m = ContractPR{}
+func (m *ContactPR) Reset() {
+	*m = ContactPR{}
 }
 
-type ContractPAbuse struct {
+type OrgNOC struct {
+	OrgNOCHandle string
+	OrgNOCName   string
+	OrgNOCPhone  string
+	OrgNOCEmail  string
+	OrgNOCRef    string
+}
+
+func (m *OrgNOC) Reset() {
+	*m = OrgNOC{}
+}
+
+type ContactPAbuse struct {
 	OrgAbuseHandle string
 	OrgAbuseName   string
 	OrgAbusePhone  string
@@ -71,6 +83,6 @@ type ContractPAbuse struct {
 	OrgAbuseRef    string
 }
 
-func (m *ContractPAbuse) Reset() {
-	*m = ContractPAbuse{}
+func (m *ContactPAbuse) Reset() {
+	*m = ContactPAbuse{}
 }
