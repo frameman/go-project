@@ -90,7 +90,7 @@ func ParserIacnicData(text string) ([]variable.IacnicBaseInfo, []variable.Iacnic
 		case "abuse-c":
 			baseInfo.Abuse_c = strings.TrimSpace(part[1])
 
-		case "intrev":
+		case "inetrev":
 			baseInfo.Inetrev = strings.TrimSpace(part[1])
 
 		case "nserver":

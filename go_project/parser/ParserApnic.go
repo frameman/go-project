@@ -34,7 +34,7 @@ func ParserApnicData(text string) ([]variable.ApnicBaseInfo, []variable.ApnicIRT
 
 		case "descr":
 			if baseInfo.Descr != "" {
-				baseInfo.Descr += " " + strings.TrimSpace(part[1])
+				baseInfo.Descr += " / " + strings.TrimSpace(part[1])
 			} else {
 				baseInfo.Descr = strings.TrimSpace(part[1])
 			}
@@ -65,13 +65,15 @@ func ParserApnicData(text string) ([]variable.ApnicBaseInfo, []variable.ApnicIRT
 			if baseInfo.Inetnum != "" {
 				baseInfo.Tech_c = strings.TrimSpace(part[1])
 			}
-			if irtInfo.Tech_c != "" {
+			if irtInfo.Irt != "" {
 				irtInfo.Tech_c = strings.TrimSpace(part[1])
 			}
 			if roleInfo.Role != "" {
 				roleInfo.Tech_c = strings.TrimSpace(part[1])
 			}
 
+		case "abuse-c":
+			baseInfo.Abuse_c = strings.TrimSpace(part[1])
 		case "status":
 			baseInfo.Status = strings.TrimSpace(part[1])
 
@@ -168,19 +170,17 @@ func ParserApnicData(text string) ([]variable.ApnicBaseInfo, []variable.ApnicIRT
 				} else {
 					irtInfo.Address = strings.TrimSpace(part[1])
 				}
-				if roleInfo.Role != "" {
-					if roleInfo.Address != "" {
-						roleInfo.Address += " " + strings.TrimSpace(part[1])
-					} else {
-						roleInfo.Address = strings.TrimSpace(part[1])
-					}
+			} else if roleInfo.Role != "" {
+				if roleInfo.Address != "" {
+					roleInfo.Address += " " + strings.TrimSpace(part[1])
+				} else {
+					roleInfo.Address = strings.TrimSpace(part[1])
 				}
-				if nicPersonInfo.Person != "" {
-					if nicPersonInfo.Address != "" {
-						nicPersonInfo.Address += " " + strings.TrimSpace(part[1])
-					} else {
-						nicPersonInfo.Address = strings.TrimSpace(part[1])
-					}
+			} else if nicPersonInfo.Person != "" {
+				if nicPersonInfo.Address != "" {
+					nicPersonInfo.Address += " " + strings.TrimSpace(part[1])
+				} else {
+					nicPersonInfo.Address = strings.TrimSpace(part[1])
 				}
 			}
 
@@ -213,6 +213,8 @@ func ParserApnicData(text string) ([]variable.ApnicBaseInfo, []variable.ApnicIRT
 		case "phone":
 			if roleInfo.Role != "" {
 				roleInfo.Phone = strings.TrimSpace(part[1])
+			} else if nicPersonInfo.Person != "" {
+				nicPersonInfo.Phone = strings.TrimSpace(part[1])
 			}
 
 		case "nic-hdl":

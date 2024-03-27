@@ -71,6 +71,12 @@ func ParserAfrinicData(text string) ([]variable.AfrinicBaseInfo, []variable.Afri
 		case "mnt-lower":
 			baseInfo.Mnt_lower = strings.TrimSpace(part[1])
 
+		case "mnt-domains":
+			baseInfo.Mnt_domains = strings.TrimSpace(part[1])
+
+		case "mnt-routes":
+			baseInfo.Mnt_routes = strings.TrimSpace(part[1])
+
 		case "mnt-irt":
 			baseInfo.Mnt_irt = strings.TrimSpace(part[1])
 
@@ -123,14 +129,14 @@ func ParserAfrinicData(text string) ([]variable.AfrinicBaseInfo, []variable.Afri
 		case "phone":
 			if orgInfo.Organisation != "" {
 				if orgInfo.Phone != "" {
-					orgInfo.Phone += " " + strings.TrimSpace(part[1])
+					orgInfo.Phone += " / " + strings.TrimSpace(part[1])
 				} else {
 					orgInfo.Phone = strings.TrimSpace(part[1])
 				}
 			}
 			if personInfo.Person != "" {
 				if personInfo.Phone != "" {
-					personInfo.Phone += " " + strings.TrimSpace(part[1])
+					personInfo.Phone += "  / " + strings.TrimSpace(part[1])
 				} else {
 					personInfo.Phone = strings.TrimSpace(part[1])
 				}
@@ -139,7 +145,7 @@ func ParserAfrinicData(text string) ([]variable.AfrinicBaseInfo, []variable.Afri
 		case "mnt-ref":
 			if orgInfo.Organisation != "" {
 				if orgInfo.Mnt_ref != "" {
-					orgInfo.Mnt_ref += " " + strings.TrimSpace(part[1])
+					orgInfo.Mnt_ref += " / " + strings.TrimSpace(part[1])
 				} else {
 					orgInfo.Mnt_ref = strings.TrimSpace(part[1])
 				}

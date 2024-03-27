@@ -62,11 +62,12 @@ func ParserArinData(text string) ([]variable.ArinBaseInfo, []variable.ArinOrgInf
 				orgInfo.RegDate = strings.TrimSpace(part[1])
 			}
 		case "Updated":
-			if baseInfo.Updated == "" {
+			if baseInfo.NetRange != "" {
 				baseInfo.Updated = strings.TrimSpace(part[1])
-			} else {
+			} else if orgInfo.OrgName != "" {
 				orgInfo.Updated = strings.TrimSpace(part[1])
 			}
+
 		case "Comment":
 			if baseInfo.NetRange != "" {
 				baseInfo.Comment = strings.TrimSpace(part[1])

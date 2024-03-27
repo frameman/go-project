@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func ParserRipeData(text string) ([]variable.RipeBaseInfo, []variable.RipeOrgInfo, []variable.RipePContact) {
+func ParserRipeData(text string) ([]variable.RipeBaseInfo, []variable.RipeOrgInfo, []variable.RipePContact, []variable.RipeRole) {
 	baseInfo := variable.RipeBaseInfo{}
 	Base_Info := []variable.RipeBaseInfo{}
 
@@ -37,6 +37,13 @@ func ParserRipeData(text string) ([]variable.RipeBaseInfo, []variable.RipeOrgInf
 			} else if orgInfo.Organisation != "" {
 				orgInfo.Country = strings.TrimSpace(part[1])
 			}
+		case "remarks":
+			if baseInfo.Inetnum != "" {
+				if baseInfo.Remarks != "" {
+					baseInfo.Remarks += " " + strings.TrimSpace(part[1])
+				}
+				baseInfo.Remarks = strings.TrimSpace(part[1])
+			}
 
 		case "admin-c":
 			if baseInfo.Inetnum != "" {
@@ -59,11 +66,15 @@ func ParserRipeData(text string) ([]variable.RipeBaseInfo, []variable.RipeOrgInf
 
 		case "mnt-by":
 			if baseInfo.Inetnum != "" {
-				baseInfo.Mnt_by = strings.TrimSpace(part[1])
+				if baseInfo.Mnt_by != "" {
+					baseInfo.Mnt_by += " / " + strings.TrimSpace(part[1])
+				} else {
+					baseInfo.Mnt_by = strings.TrimSpace(part[1])
+				}
 			}
 			if orgInfo.Organisation != "" {
 				if orgInfo.Mnt_by != "" {
-					orgInfo.Mnt_by += " " + strings.TrimSpace(part[1])
+					orgInfo.Mnt_by += " / " + strings.TrimSpace(part[1])
 				} else {
 					orgInfo.Mnt_by = strings.TrimSpace(part[1])
 				}
@@ -184,11 +195,13 @@ func ParserRipeData(text string) ([]variable.RipeBaseInfo, []variable.RipeOrgInf
 		case "mnt-ref":
 			if orgInfo.Organisation != "" {
 				if orgInfo.Mnt_ref != "" {
-					orgInfo.Mnt_ref += " " + strings.TrimSpace(part[1])
+					orgInfo.Mnt_ref += " / " + strings.TrimSpace(part[1])
 				} else {
 					orgInfo.Mnt_ref = strings.TrimSpace(part[1])
 				}
 			}
+		case "descr":
+			orgInfo.Descr = strings.TrimSpace(part[1])
 
 			//parser nic person
 		case "person":
@@ -207,5 +220,5 @@ func ParserRipeData(text string) ([]variable.RipeBaseInfo, []variable.RipeOrgInf
 			roleInfo.Role = strings.TrimSpace(part[1])
 		}
 	}
-	return Base_Info, Org_Info, Person_Info
+	return Base_Info, Org_Info, Person_Info, Role_Info
 }

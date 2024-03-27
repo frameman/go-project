@@ -1,0 +1,172 @@
+#all sample are from https://www.whois365.com/
+
+##111.15.67.207
+% [whois.apnic.net]
+% Whois data copyright terms http://www.apnic.net/db/dbcopyright.html
+
+% Information related to '111.0.0.0 - 111.63.255.255'
+
+% Abuse contact for '111.0.0.0 - 111.63.255.255' is 'abuse(aT]chinamobile.com'
+
+inetnum: 111.0.0.0 - 111.63.255.255
+netname: CMNET
+descr: China Mobile Communications Corporation
+descr: Mobile Communications Network Operator in China
+descr: Internet Service Provider in China
+country: CN
+org: ORG-CM1-AP
+admin-c: ct74-AP
+tech-c: HL1318-AP
+abuse-c: AC2006-AP
+status: ALLOCATED PORTABLE
+remarks: service provider
+remarks: --------------------------------------------------------
+remarks: To report network abuse, please contact mnt-irt
+remarks: For troubleshooting, please contact tech-c and admin-c
+remarks: Report invalid contact via www.apnic.net/invalidcontact
+remarks: --------------------------------------------------------
+mnt-by: APNIC-HM
+mnt-lower: MAINT-CN-CMCC
+mnt-routes: MAINT-CN-CMCC
+mnt-irt: IRT-CHINAMOBILE-CN
+last-modified: 2020-07-15T13:10:04Z
+source: APNIC
+
+irt: IRT-CHINAMOBILE-CN
+address: China Mobile Communications Corporation
+address: 29, Jinrong Ave., Xicheng District, Beijing, 100032
+e-mail: abuse(aT]chinamobile.com
+abuse-mailbox: abuse(aT]chinamobile.com
+admin-c: CT74-AP
+tech-c: CT74-AP
+auth: # Filtered
+remarks: abuse(aT]chinamobile.com was validated on 2024-02-06
+mnt-by: MAINT-CN-CMCC
+last-modified: 2024-02-06T13:22:19Z
+source: APNIC
+
+organisation: ORG-CM1-AP
+org-name: China Mobile
+org-type: LIR
+country: CN
+address: 29, Jinrong Ave.
+phone: +86-10-5268-6688
+fax-no: +86-10-5261-6187
+e-mail: hostmaster(aT]chinamobile.com
+mnt-ref: APNIC-HM
+mnt-by: APNIC-HM
+last-modified: 2023-09-05T02:14:48Z
+source: APNIC
+
+role: ABUSE CHINAMOBILECN
+address: China Mobile Communications Corporation
+address: 29, Jinrong Ave., Xicheng District, Beijing, 100032
+country: ZZ
+phone: +000000000
+e-mail: abuse(aT]chinamobile.com
+admin-c: CT74-AP
+tech-c: CT74-AP
+nic-hdl: AC2006-AP
+remarks: Generated from irt object IRT-CHINAMOBILE-CN
+remarks: abuse(aT]chinamobile.com was validated on 2024-02-06
+abuse-mailbox: abuse(aT]chinamobile.com
+mnt-by: APNIC-ABUSE
+last-modified: 2024-02-06T13:23:22Z
+source: APNIC
+
+role: chinamobile tech
+address: 29, Jinrong Ave.,Xicheng district
+address: Beijing
+country: CN
+phone: +86 5268 6688
+fax-no: +86 5261 6187
+e-mail: hostmaster(aT]chinamobile.com
+admin-c: HL1318-AP
+tech-c: HL1318-AP
+nic-hdl: ct74-AP
+notify: hostmaster(aT]chinamobile.com
+mnt-by: MAINT-cn-cmcc
+abuse-mailbox: abuse(aT]chinamobile.com
+last-modified: 2016-11-29T09:37:27Z
+source: APNIC
+
+person: haijun li
+nic-hdl: HL1318-AP
+e-mail: hostmaster(aT]chinamobile.com
+address: 29,Jinrong Ave, Xicheng district,beijing,100032
+phone: +86 1052686688
+fax-no: +86 10 52616187
+country: CN
+mnt-by: MAINT-CN-CMCC
+abuse-mailbox: abuse(aT]chinamobile.com
+last-modified: 2016-11-29T09:38:38Z
+source: APNIC
+
+% Information related to '111.0.0.0/10AS9808'
+
+route: 111.0.0.0/10
+descr: China Mobile communications corporation
+origin: AS9808
+mnt-by: MAINT-CN-CMCC
+last-modified: 2012-02-15T08:47:26Z
+source: APNIC
+
+% This query was served by the APNIC Whois Service version 1.88.25 (WHOIS-US3
+
+
+
+##181.77.37.123
+no result invalid ip
+
+
+##90.173.152.199
+% This is the RIPE Database query service.
+% The objects are in RPSL format.
+%
+% The RIPE Database is subject to Terms and Conditions.
+% See https://apps.db.ripe.net/docs/HTML-Terms-And-Conditions
+
+% Note: this output has been filtered.
+% To receive output for a database update, use the "-B" flag.
+
+% Information related to '90.173.0.0 - 90.173.255.255'
+
+% Abuse contact for '90.173.0.0 - 90.173.255.255' is 'abuse.es{=)orange.com'
+
+inetnum: 90.173.0.0 - 90.173.255.255
+netname: OrangeFTTH
+descr: Orange FTTH User
+country: ES
+admin-c: HA1067-RIPE
+tech-c: HA1067-RIPE
+status: ASSIGNED PA
+mnt-by: UNI2-MNT
+mnt-lower: UNI2-MNT
+mnt-routes: UNI2-MNT
+created: 2018-07-16T12:39:59Z
+last-modified: 2018-07-16T12:39:59Z
+source: RIPE
+
+person: Angel Luis Gonzalez
+address: Parque Empresarial La Finca
+address: Edificio 8
+address: Paseo del Club Deportivo, 1
+address: 28223 Pozuelo de Alarcon
+address: Madrid, Spain
+phone: +34 91 1784000
+nic-hdl: HA1067-RIPE
+mnt-by: UNI2-MNT
+created: 2005-08-19T09:44:04Z
+last-modified: 2020-02-19T07:48:46Z
+source: RIPE # Filtered
+
+% Information related to '90.160.0.0/12AS12479'
+
+route: 90.160.0.0/12
+mnt-by: UNI2-MNT
+mnt-routes: UNI2-MNT
+descr: Uni2 customers
+origin: AS12479
+created: 2011-07-29T23:03:32Z
+last-modified: 2011-07-29T23:03:32Z
+source: RIPE

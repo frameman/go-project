@@ -14,7 +14,8 @@ type RipeBaseInfo struct {
 	Created       string
 	Last_modified string
 	Source        string
-	Geofeed       string
+	Remarks       string
+	//Geofeed       string `json:"Geofeed"`
 }
 
 func (m *RipeBaseInfo) Reset() {
@@ -22,13 +23,13 @@ func (m *RipeBaseInfo) Reset() {
 }
 
 type RipeOrgInfo struct {
-	Organisation  string
 	Org_name      string
 	Org_type      string
 	Address       string
 	Phone         string
 	Fax_no        string
 	Admin_c       string
+	Organisation  string
 	Country       string
 	Abuse_c       string
 	Mnt_ref       string
@@ -36,6 +37,7 @@ type RipeOrgInfo struct {
 	Created       string
 	Last_modified string
 	Source        string
+	Descr         string
 }
 
 func (m *RipeOrgInfo) Reset() {
